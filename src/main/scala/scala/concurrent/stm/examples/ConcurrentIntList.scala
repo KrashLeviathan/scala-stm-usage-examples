@@ -1,5 +1,8 @@
 /* scala-stm - (c) 2009-2010, Stanford University, PPL */
-package com.krashdev.list
+/* https://nbronson.github.io/scala-stm/quick_start.html */
+/* https://github.com/nbronson/scala-stm/blob/master/src/test/scala/scala/concurrent/stm/examples/ConcurrentIntList.scala */
+
+package scala.concurrent.stm.examples
 
 import scala.concurrent.stm._
 

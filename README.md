@@ -1,29 +1,23 @@
-# Java-Scala Integration Example
+# ScalaSTM Usage Examples
 
-All the code in this example project was taken from a
+The Maven POM file was taken mostly from a
 [Dzone tutorial](https://dzone.com/articles/scala-in-java-maven-project)
 by [Alexey Zvolinskiy](https://dzone.com/users/1123737/Alex_Zvolinskiy.html).
-The tutorial was from 2016, so there were some slight updates
-that needed to be made to make it work in the current version
-of scala in 2018. I didn't see the example code posted in
-[Zvolinskiy's GitHub account](https://github.com/Fruzenshtein),
-so I'm posting it here as an example of working code for
-me to reference in the future. I hope he doesn't mind!
 
 It's a good tutorial, and I recommend reading through it!
 I'm a Scala n00b, and I went through the the tutorial in hopes of
 getting a better understanding of how to integrate Scala into a
-Java project. The result was having a main Scala project/runnable
-that pulls in Java code.
+Java project.
 
-The next step was to go the other direction:
-to have a java project/runnable that pulls in Scala code. That is,
-I'd like the *bulk* of my project to be Java, with a small subset
-of Scala inserted into the project. The end-goal is to use
-[ScalaSTM](https://nbronson.github.io/scala-stm/) in a mostly Java
-project.
+The ScalaSTM examples are from the
+[https://nbronson.github.io/scala-stm/](ScalaSTM Site). More specific links
+to their sources can be found at the top of each file in the comments.
 
-To that effect, I modified the java Runner class to pull in the
-BooksProcessor that was written in Scala. It works! A more elegant
-solution could be written, but this at least serves as a proof of
-concept.
+## Running the Examples
+
+- The `Runner.main()` method is a very basic proof-of-concept to show
+  how a class created with ScalaSTM can be imported into and used in a Java
+  project.
+- The `RealityShowPhilosophers.main()` method shows concurrency in action!
+  It uses five threads to simulate and observe five philosophers eating
+  and thinking concurrently.

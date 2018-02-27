@@ -1,15 +1,11 @@
-import com.krashdev.model.Book;
-import com.krashdev.storage.BookStorage;
-import com.krashdev.service.BooksProcessor;
-import scala.collection.Iterator;
+import scala.concurrent.stm.examples.ConcurrentIntList;
 
 public class Runner {
     public static void main(String[] args) {
-        BookStorage storage = new BookStorage();
-        Iterator iter = BooksProcessor.filterByAuthor("Jack London", storage.getBooks()).iterator();
-        while (iter.hasNext()) {
-            Book next = (Book) iter.next();
-            System.out.println(next.toString());
-        }
+        ConcurrentIntList list = new ConcurrentIntList();
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        System.out.println(list.toString());
     }
 }
